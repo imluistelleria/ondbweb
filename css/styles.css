@@ -441,8 +441,8 @@ body {
 
 /* Linear-style white primary button */
 .btn-primary {
-    background: #ffffff;
-    color: #0a0a0b !important;
+    background: #3d7ada;
+    color: #ffffff !important;
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 6px;
@@ -457,8 +457,8 @@ body {
 }
 
 .btn-primary:hover {
-    background: #ffffff;
-    color: #0a0a0b !important;
+    background: #3d7ada;
+    color: #ffffff !important;
     opacity: 0.9;
 }
 
@@ -544,7 +544,7 @@ body {
 .btn-large {
     padding: 0.9rem 1.75rem;
     font-size: 0.95rem;
-    border-radius: 10px;
+    border-radius: 100px;
 }
 
 /* Light mode: dark primary button */
@@ -825,7 +825,7 @@ h1 em {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #22c55e;
+    background: #3d7ada;
     display: inline-block;
     animation: badgePulse 2s ease-in-out infinite;
 }
@@ -1226,8 +1226,8 @@ h1 em {
 .dot.yellow { 
     background: #eab308;
 }
-.dot.green { 
-    background: #22c55e;
+.dot.green {
+    background: #3d7ada;
 }
 
 .terminal-title {
@@ -1322,7 +1322,7 @@ h1 em {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-blue), #06b6d4);
+    background: linear-gradient(90deg, var(--primary-blue), #3d7ada);
     opacity: 0.6;
 }
 
@@ -1359,7 +1359,7 @@ h1 em {
 .integration-step-number {
     width: 28px;
     height: 28px;
-    background: #22c55e;
+    background: #3d7ada;
     color: #ffffff;
     border-radius: 50%;
     display: flex;
@@ -1510,8 +1510,8 @@ h1 em {
 }
 
 /* Category colors */
-.section-category.cyan::before { background: #06b6d4; }
-.section-category.green::before { background: #22c55e; }
+.section-category.cyan::before { background: #3d7ada; }
+.section-category.green::before { background: #3d7ada; }
 .section-category.yellow::before { background: #eab308; }
 .section-category.purple::before { background: #a855f7; }
 .section-category.orange::before { background: #f97316; }
@@ -2315,7 +2315,7 @@ h2 {
 /* CTA buttons - use default styles */
 .cta .btn-primary,
 .cta-btn-primary {
-    background: #0a0a0b;
+    background: #3d7ada;
     color: #ffffff !important;
     border: none;
     font-weight: 500;
@@ -2406,6 +2406,8 @@ h2 {
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .cta-card:hover {
@@ -2448,6 +2450,7 @@ h2 {
 
 .cta-card .btn-primary {
     width: 100%;
+    margin-top: auto;
 }
 
 .cta-card .btn-outline {
@@ -2456,7 +2459,8 @@ h2 {
     border: 1px solid var(--border-color);
     color: var(--text-primary) !important;
     padding: 0.75rem 1.5rem;
-    border-radius: 6px;
+    border-radius: 100px;
+    margin-top: auto;
     font-weight: 500;
     transition: all 0.15s ease;
 }
@@ -2602,7 +2606,7 @@ h2 {
     justify-content: center;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+    border-radius: 100px;
     color: #64748b;
     transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
@@ -3457,7 +3461,7 @@ h2 {
 }
 
 .blog-post-content thead tr {
-    border-left: 3px solid #22c55e;
+    border-left: 3px solid #3d7ada;
 }
 
 .blog-post-content th {
@@ -3487,7 +3491,7 @@ h2 {
 
 .blog-post-content tbody tr:hover {
     background: rgba(0, 0, 0, 0.02);
-    border-left-color: #22c55e;
+    border-left-color: #3d7ada;
 }
 
 .blog-post-content td code {
@@ -3615,7 +3619,7 @@ h2 {
     height: 40px;
     background: transparent;
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s ease;
     color: var(--text-secondary);
@@ -3937,8 +3941,8 @@ h2 {
 
 [data-theme="dark"] .cta .btn-primary,
 [data-theme="dark"] .cta-btn-primary {
-    background: #ffffff;
-    color: #0a0a0b !important;
+    background: #3d7ada;
+    color: #ffffff !important;
 }
 
 [data-theme="dark"] .cta .btn-outline {
@@ -4430,7 +4434,7 @@ body,
     color: #334155;
     margin: 0;
     padding-left: 1rem;
-    border-left: 3px solid #22c55e;
+    border-left: 3px solid #3d7ada;
     font-style: italic;
 }
 
@@ -4539,6 +4543,7 @@ body,
 .comparison-table td.highlight {
     color: var(--text-primary);
     font-weight: 500;
+    background: rgba(61, 122, 218, 0.06);
 }
 
 .comparison-table tbody tr {
@@ -4575,12 +4580,12 @@ body,
 }
 
 .comparison-table th.highlight {
-    background: #06b6d4;
+    background: #3d7ada;
     color: #ffffff;
 }
 
 .comparison-table td.check-yes {
-    color: #22c55e;
+    color: #3d7ada;
     font-weight: 600;
 }
 
@@ -4593,7 +4598,7 @@ body,
 }
 
 [data-theme="dark"] .comparison-table th.highlight {
-    background: #06b6d4;
+    background: #3d7ada;
     color: #ffffff;
 }
 
@@ -4602,7 +4607,7 @@ body,
 }
 
 [data-theme="dark"] .comparison-table td.highlight {
-    background: rgba(6, 182, 212, 0.08);
+    background: rgba(61, 122, 218, 0.08);
 }
 
 /* Alternating Features Section */
@@ -4673,7 +4678,7 @@ body,
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #22c55e;
+    background: #3d7ada;
 }
 
 /* Earnings Preview Visual */
@@ -4695,12 +4700,12 @@ body,
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #22c55e, #06b6d4);
+    background: linear-gradient(90deg, #3d7ada, #6ba0f0);
     opacity: 0.6;
 }
 
 .earnings-preview:hover {
-    box-shadow: 0 16px 48px rgba(34, 197, 94, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 16px 48px rgba(61, 122, 218, 0.08), 0 4px 12px rgba(0, 0, 0, 0.03);
     transform: translateY(-4px);
 }
 
@@ -4755,8 +4760,8 @@ body,
 }
 
 .chart-bar.active {
-    background: linear-gradient(180deg, #22c55e, #16a34a);
-    box-shadow: 0 0 12px rgba(34, 197, 94, 0.3);
+    background: linear-gradient(180deg, #3d7ada, #2d5fb8);
+    box-shadow: 0 0 12px rgba(61, 122, 218, 0.3);
 }
 
 .earnings-stats {
@@ -5051,7 +5056,7 @@ body,
 }
 
 [data-theme="dark"] .comparison-table th.highlight {
-    background: #06b6d4;
+    background: #3d7ada;
     color: #ffffff;
 }
 
