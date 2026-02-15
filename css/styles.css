@@ -2410,6 +2410,10 @@ h2 {
     white-space: nowrap;
 }
 
+.flow-hub-cta-mobile {
+    display: none;
+}
+
 .flow-hub-glow {
     position: absolute;
     inset: -16px;
@@ -3838,7 +3842,7 @@ body::before {
     .partner-logos-bar {
         flex-direction: column;
         gap: 16px;
-        padding: 20px 28px;
+        padding: 20px 16px;
         border-radius: 20px;
         max-width: 90%;
     }
@@ -3849,17 +3853,19 @@ body::before {
     }
 
     .partner-logos-grid {
-        gap: 16px;
+        gap: 0;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     .partner-logo-item {
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
     }
 
     .partner-logo-item img {
-        transform: scale(0.7);
+        transform: none;
+        max-width: 80px;
     }
 
     /* Architecture Mobile */
@@ -3896,6 +3902,17 @@ body::before {
 
     .flow-agents {
         order: 3;
+    }
+
+    .flow-hub .flow-hub-cta {
+        display: none;
+    }
+
+    .flow-hub-cta-mobile {
+        display: inline-block;
+        order: 4;
+        margin: 24px auto 0;
+        text-align: center;
     }
 
     .arch-details {
@@ -4095,25 +4112,33 @@ body::before {
     .footer-content {
         flex-direction: column;
         gap: 2rem;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
     }
-    
+
     .footer-brand {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 1rem;
     }
-    
+
     .footer-tagline {
         border-left: none;
         padding-left: 0;
         padding-top: 0.5rem;
         border-top: 1px solid var(--border-color);
     }
-    
+
     .footer-nav {
+        width: 100%;
         flex-wrap: wrap;
         gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .footer-social {
+        width: 100%;
+        justify-content: center;
     }
     
     .footer-bottom-content {
@@ -4987,6 +5012,42 @@ body::before {
     color: var(--text-muted);
 }
 
+@media (max-width: 768px) {
+    .comparison-table-wrapper {
+        overflow-x: hidden;
+    }
+
+    .comparison-table {
+        font-size: 0.75rem;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.65rem 0.5rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .comparison-table th:first-child,
+    .comparison-table td:first-child {
+        width: 28%;
+    }
+
+    .comparison-table th:nth-child(2),
+    .comparison-table td:nth-child(2),
+    .comparison-table th:nth-child(3),
+    .comparison-table td:nth-child(3) {
+        width: 22%;
+    }
+
+    .comparison-table th:last-child,
+    .comparison-table td:last-child {
+        width: 28%;
+    }
+}
+
 /* Alternating Features Section */
 .alternating-features {
     padding: 120px 0;
@@ -5473,10 +5534,14 @@ body::before {
         transform: rotate(180deg);
     }
 
-    .nav-dropdown-grid {
+    .nav-dropdown-grid,
+    .nav-dropdown-menu.dropdown-product .nav-dropdown-grid {
         display: flex;
         flex-direction: column;
         min-width: 100%;
+        grid-template-columns: none;
+        background: transparent;
+        border: none;
     }
 
     .nav-dropdown-grid .dropdown-divider {
@@ -5485,6 +5550,19 @@ body::before {
 
     .nav-dropdown-col {
         padding: 0;
+    }
+
+    .nav-dropdown-menu.dropdown-product {
+        width: 100%;
+        background: transparent;
+        padding: 0;
+    }
+
+    .nav-dropdown-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.6rem 1rem;
+        border-top: none;
     }
 
     .nav-dropdown-col a {
