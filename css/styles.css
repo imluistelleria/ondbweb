@@ -477,26 +477,7 @@ body {
 }
 
 .nav-dropdown-menu.dropdown-product .nav-dropdown-col a {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 4px;
-    padding: 16px 18px;
-}
-
-.nav-dropdown-menu.dropdown-product .dropdown-item-title {
-    display: block;
-    font-size: 0.8125rem;
-    font-weight: 400;
-    color: var(--primary-blue);
-}
-
-.nav-dropdown-menu.dropdown-product .dropdown-item-desc {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--text-primary);
-    line-height: 1.35;
-    white-space: nowrap;
+    padding: 12px 18px;
 }
 
 .nav-dropdown-footer {
