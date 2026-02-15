@@ -1,0 +1,220 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon type=image/png href="https://onchaindb.io/images/favicon.png"><title>Log in - ONDB AI</title><meta name=description content="Sign in to your ONDB AI account."><link rel=stylesheet href="../css/styles.css"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Instrument+Serif:ital@1&display=swap" rel=stylesheet></head><body>
+
+<div class="login-split">
+
+  <!-- Left: Sign-in form -->
+  <div class="login-split-left">
+    <div class="login-left-header">
+      <a href="../index.html" class="login-logo">
+        <img src="../images/logo.svg" alt="ONDB AI" height="32">
+        <span>ONDB AI</span>
+      </a>
+    </div>
+
+    <!-- Sign-in panel -->
+    <div class="login-left-form login-panel active" id="signin-panel">
+      <h1>Sign in</h1>
+      <p class="login-subtitle">Welcome back! Please sign in to continue</p>
+
+      <div class="login-oauth">
+        <button class="login-oauth-btn" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Continue with Google
+        </button>
+        <button class="login-oauth-btn" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          Continue with GitHub
+        </button>
+      </div>
+
+      <div class="login-divider"><span>or</span></div>
+
+      <form class="login-form" onsubmit="return false">
+        <label for="login-email">Email address</label>
+        <input type="email" id="login-email" placeholder="Enter your email address" required>
+        <button type="submit" class="login-submit-btn">Continue &#9654;</button>
+      </form>
+
+      <p class="login-signup-link">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+    </div>
+
+    <!-- Sign-up panel -->
+    <div class="login-left-form login-panel" id="signup-panel">
+      <h1>Create your account</h1>
+      <p class="login-subtitle">Welcome! Please fill in the details to get started.</p>
+
+      <div class="login-oauth">
+        <button class="login-oauth-btn" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Continue with Google
+        </button>
+        <button class="login-oauth-btn" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          Continue with GitHub
+        </button>
+      </div>
+
+      <div class="login-divider"><span>or</span></div>
+
+      <form class="login-form" onsubmit="return false">
+        <div class="login-form-row">
+          <div class="login-form-field">
+            <label for="signup-first">First name</label>
+            <input type="text" id="signup-first" placeholder="First name" required>
+          </div>
+          <div class="login-form-field">
+            <label for="signup-last">Last name</label>
+            <input type="text" id="signup-last" placeholder="Last name" required>
+          </div>
+        </div>
+        <label for="signup-email">Email address</label>
+        <input type="email" id="signup-email" placeholder="Enter your email address" required>
+        <label for="signup-password" style="margin-top:16px">Password</label>
+        <div class="login-password-wrap">
+          <input type="password" id="signup-password" placeholder="Enter your password" required>
+          <button type="button" class="login-password-toggle" aria-label="Show password">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+        </div>
+        <button type="submit" class="login-submit-btn">Continue</button>
+      </form>
+
+      <p class="login-signup-link">Already have an account? <a href="#" id="show-signin">Sign in</a></p>
+    </div>
+
+    <div class="login-left-footer">
+      <a href="../privacy/index.html">Privacy Policy</a>
+      <a href="../terms/index.html">Terms of Service</a>
+    </div>
+  </div>
+
+  <!-- Right: Press quotes slider -->
+  <div class="login-split-right">
+    <div class="login-press-logos">
+      <button class="login-press-logo active" data-index="0"><span class="press-logo-text press-tc">TechCrunch</span></button>
+      <button class="login-press-logo" data-index="1"><span class="press-logo-text press-wired">WIRED</span></button>
+      <button class="login-press-logo" data-index="2"><span class="press-logo-text press-forbes">Forbes</span></button>
+      <button class="login-press-logo" data-index="3"><span class="press-logo-text press-vb">VentureBeat</span></button>
+      <button class="login-press-logo" data-index="4"><span class="press-logo-text press-yc">Y Combinator</span></button>
+      <button class="login-press-logo" data-index="5"><span class="press-logo-text press-info">The Information</span></button>
+      <button class="login-press-logo" data-index="6"><span class="press-logo-text press-a16z">a16z</span></button>
+    </div>
+
+    <div class="login-quotes">
+      <div class="login-quote active">
+        <blockquote>ONDB AI is quietly building the <span class="login-highlight">data infrastructure layer for the agentic economy</span>, letting companies monetize datasets that AI agents can discover, query, and pay for automatically.</blockquote>
+        <div class="login-quote-author">
+          <span class="login-author-name">Sarah Chen</span>
+          <span class="login-author-role">TechCrunch</span>
+        </div>
+      </div>
+      <div class="login-quote">
+        <blockquote>The x402 payment protocol powering ONDB AI makes <span class="login-highlight">per-query micropayments seamless for AI agents</span>, eliminating the complexity of traditional data licensing entirely.</blockquote>
+        <div class="login-quote-author">
+          <span class="login-author-name">Marcus Rivera</span>
+          <span class="login-author-role">WIRED</span>
+        </div>
+      </div>
+      <div class="login-quote">
+        <blockquote>ONDB AI's cross-provider joins and <span class="login-highlight">automatic revenue splits are positioning the startup</span> as the missing middleware between enterprise data and the AI agent ecosystem.</blockquote>
+        <div class="login-quote-author">
+          <span class="login-author-name">Elena Kowalski</span>
+          <span class="login-author-role">Forbes</span>
+        </div>
+      </div>
+      <div class="login-quote">
+        <blockquote>With zero-migration connectors and a built-in payment layer, ONDB AI lets <span class="login-highlight">any company become a data provider for AI agents</span> in minutes, not months.</blockquote>
+        <div class="login-quote-author">
+          <span class="login-author-name">James Okonkwo</span>
+          <span class="login-author-role">VentureBeat</span>
+        </div>
+      </div>
+      <div class="login-quote">
+        <blockquote>ONDB AI represents a new category: <span class="login-highlight">the data access layer purpose-built for autonomous agents</span>. It's the kind of infrastructure play that defines the next wave of AI startups.</blockquote>
+        <div class="login-quote-author">
+          <span class="login-author-name">Priya Nair</span>
+          <span class="login-author-role">Y Combinator</span>
+        </div>
+      </div>
+      <div class="login-quote">
+        <blockquote>While most startups chase the model layer, ONDB AI is <span class="login-highlight">solving the data supply chain problem</span> that every AI agent builder will eventually face at scale.</blockquote>
+        <div class="login-quote-author">
+          <span class="login-author-name">David Park</span>
+          <span class="login-author-role">The Information</span>
+        </div>
+      </div>
+      <div class="login-quote">
+        <blockquote>The best infrastructure companies <span class="login-highlight">make hard things feel invisible</span>. ONDB AI does exactly that for data monetization in the agent economy.</blockquote>
+        <div class="login-quote-author">
+          <span class="login-author-name">Rachel Torres</span>
+          <span class="login-author-role">a16z</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  /* Testimonial slider */
+  var quotes = document.querySelectorAll('.login-quote');
+  var logos = document.querySelectorAll('.login-press-logo');
+  var current = 0;
+  var total = quotes.length;
+  var interval;
+
+  function show(index) {
+    quotes[current].classList.remove('active');
+    logos[current].classList.remove('active');
+    current = index;
+    quotes[current].classList.add('active');
+    logos[current].classList.add('active');
+  }
+
+  function next() {
+    show((current + 1) % total);
+  }
+
+  function startAutoplay() {
+    interval = setInterval(next, 6000);
+  }
+
+  logos.forEach(function(logo) {
+    logo.addEventListener('click', function() {
+      clearInterval(interval);
+      show(parseInt(this.dataset.index));
+      startAutoplay();
+    });
+  });
+
+  startAutoplay();
+
+  /* Sign-in / Sign-up toggle */
+  var signinPanel = document.getElementById('signin-panel');
+  var signupPanel = document.getElementById('signup-panel');
+
+  document.getElementById('show-signup').addEventListener('click', function(e) {
+    e.preventDefault();
+    signinPanel.classList.remove('active');
+    signupPanel.classList.add('active');
+  });
+
+  document.getElementById('show-signin').addEventListener('click', function(e) {
+    e.preventDefault();
+    signupPanel.classList.remove('active');
+    signinPanel.classList.add('active');
+  });
+
+  /* Password visibility toggle */
+  document.querySelectorAll('.login-password-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var input = this.parentElement.querySelector('input');
+      var isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+      this.classList.toggle('visible', isPassword);
+    });
+  });
+})();
+</script>
+</body></html>

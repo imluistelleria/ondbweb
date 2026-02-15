@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <defs>
+    <filter id="shield-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="12" result="blur"/>
+      <feFlood flood-color="#3d7ada" flood-opacity="0.3" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="item-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#3d7ada" flood-opacity="0.15" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <linearGradient id="shield-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6ca6f8" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#2a4a8b" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle hex grid background -->
+  <g opacity="0.04">
+    <pattern id="hex-grid" x="0" y="0" width="40" height="46" patternUnits="userSpaceOnUse">
+      <polygon points="20,0 40,12 40,34 20,46 0,34 0,12" stroke="#6ca6f8" stroke-width="0.5" fill="none"/>
+    </pattern>
+    <rect width="600" height="450" fill="url(#hex-grid)"/>
+  </g>
+
+  <!-- ============ CENTRAL SHIELD ============ -->
+  <g filter="url(#shield-glow)" transform="translate(300, 190)">
+    <!-- Shield shape -->
+    <path d="M 0 -60 L 48 -40 L 48 10 Q 48 50 0 70 Q -48 50 -48 10 L -48 -40 Z" stroke="url(#shield-grad)" stroke-width="2" fill="#2a4a8b" fill-opacity="0.2" stroke-linejoin="round"/>
+
+    <!-- Inner shield outline -->
+    <path d="M 0 -44 L 34 -28 L 34 8 Q 34 38 0 52 Q -34 38 -34 8 L -34 -28 Z" stroke="#3d7ada" stroke-width="1" fill="none" opacity="0.3" stroke-linejoin="round"/>
+
+    <!-- Checkmark inside shield -->
+    <polyline points="-14,4 -4,14 18,-10" stroke="#6ca6f8" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Pulsing ring -->
+    <path d="M 0 -60 L 48 -40 L 48 10 Q 48 50 0 70 Q -48 50 -48 10 L -48 -40 Z" stroke="#3d7ada" fill="none" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.3;0" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- ============ LEFT SIDE: AUDIT LOG ENTRIES ============ -->
+  <g transform="translate(40, 80)">
+    <!-- Section label -->
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#fff" opacity="0.6" font-weight="500">Audit Log</text>
+
+    <!-- Log entry 1 -->
+    <g transform="translate(0, 18)" filter="url(#item-glow)">
+      <rect x="0" y="0" width="175" height="32" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <text x="10" y="13" font-family="ui-monospace, monospace" font-size="7" fill="#6ca6f8" opacity="0.5">14:23:01 UTC</text>
+      <text x="10" y="24" font-family="ui-monospace, monospace" font-size="7.5" fill="#fff" opacity="0.6">Query executed by agent_a</text>
+      <!-- Checkmark -->
+      <polyline points="158,12 162,17 170,9" stroke="#3d7ada" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    </g>
+
+    <!-- Log entry 2 -->
+    <g transform="translate(0, 58)" filter="url(#item-glow)">
+      <rect x="0" y="0" width="175" height="32" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <text x="10" y="13" font-family="ui-monospace, monospace" font-size="7" fill="#6ca6f8" opacity="0.5">14:22:58 UTC</text>
+      <text x="10" y="24" font-family="ui-monospace, monospace" font-size="7.5" fill="#fff" opacity="0.6">Schema access granted</text>
+      <polyline points="158,12 162,17 170,9" stroke="#3d7ada" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    </g>
+
+    <!-- Log entry 3 -->
+    <g transform="translate(0, 98)" filter="url(#item-glow)">
+      <rect x="0" y="0" width="175" height="32" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <text x="10" y="13" font-family="ui-monospace, monospace" font-size="7" fill="#6ca6f8" opacity="0.5">14:22:45 UTC</text>
+      <text x="10" y="24" font-family="ui-monospace, monospace" font-size="7.5" fill="#fff" opacity="0.6">Token validated via x402</text>
+      <polyline points="158,12 162,17 170,9" stroke="#3d7ada" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    </g>
+
+    <!-- Log entry 4 -->
+    <g transform="translate(0, 138)" filter="url(#item-glow)">
+      <rect x="0" y="0" width="175" height="32" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <text x="10" y="13" font-family="ui-monospace, monospace" font-size="7" fill="#6ca6f8" opacity="0.5">14:22:30 UTC</text>
+      <text x="10" y="24" font-family="ui-monospace, monospace" font-size="7.5" fill="#fff" opacity="0.6">Rate limit check passed</text>
+      <polyline points="158,12 162,17 170,9" stroke="#3d7ada" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+    </g>
+
+    <!-- Log entry 5 (faded) -->
+    <g transform="translate(0, 178)" opacity="0.5">
+      <rect x="0" y="0" width="175" height="32" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.1"/>
+      <text x="10" y="13" font-family="ui-monospace, monospace" font-size="7" fill="#6ca6f8" opacity="0.4">14:22:15 UTC</text>
+      <text x="10" y="24" font-family="ui-monospace, monospace" font-size="7.5" fill="#fff" opacity="0.4">Connection established</text>
+      <polyline points="158,12 162,17 170,9" stroke="#3d7ada" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+    </g>
+
+    <!-- Flowing dots (log stream animation) -->
+    <circle r="2" fill="#3d7ada" opacity="0.6">
+      <animate attributeName="cy" from="-10" to="220" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" from="0" to="0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Connection lines from log to shield -->
+  <line x1="220" y1="140" x2="258" y2="175" stroke="#3d7ada" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.25" stroke-linecap="round"/>
+  <line x1="220" y1="180" x2="258" y2="190" stroke="#3d7ada" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.25" stroke-linecap="round"/>
+  <line x1="220" y1="220" x2="258" y2="205" stroke="#3d7ada" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.25" stroke-linecap="round"/>
+
+  <!-- ============ RIGHT SIDE: ACCESS CONTROLS ============ -->
+  <g transform="translate(385, 80)">
+    <!-- Section label -->
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="11" fill="#fff" opacity="0.6" font-weight="500">Access Controls</text>
+
+    <!-- Lock icon -->
+    <g transform="translate(10, 28)" filter="url(#item-glow)">
+      <rect x="0" y="0" width="170" height="38" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <!-- Lock body -->
+      <rect x="12" y="16" width="16" height="12" rx="2" stroke="#6ca6f8" stroke-width="1.5" fill="none"/>
+      <!-- Lock shackle -->
+      <path d="M 15 16 L 15 11 Q 15 6 20 6 Q 25 6 25 11 L 25 16" stroke="#6ca6f8" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <!-- Lock keyhole -->
+      <circle cx="20" cy="22" r="1.5" fill="#6ca6f8"/>
+      <text x="40" y="18" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6">Encryption</text>
+      <text x="40" y="29" font-family="ui-monospace, monospace" font-size="7.5" fill="#3d7ada" opacity="0.5">AES-256-GCM</text>
+    </g>
+
+    <!-- Key icon -->
+    <g transform="translate(10, 76)" filter="url(#item-glow)">
+      <rect x="0" y="0" width="170" height="38" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <!-- Key shape -->
+      <circle cx="18" cy="19" r="6" stroke="#6ca6f8" stroke-width="1.5" fill="none"/>
+      <line x1="24" y1="19" x2="36" y2="19" stroke="#6ca6f8" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="33" y1="19" x2="33" y2="23" stroke="#6ca6f8" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="36" y1="19" x2="36" y2="23" stroke="#6ca6f8" stroke-width="1.5" stroke-linecap="round"/>
+      <text x="46" y="18" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6">API Keys</text>
+      <text x="46" y="29" font-family="ui-monospace, monospace" font-size="7.5" fill="#3d7ada" opacity="0.5">sk_live_***8f2a</text>
+    </g>
+
+    <!-- Permission toggles -->
+    <g transform="translate(10, 126)" filter="url(#item-glow)">
+      <rect x="0" y="0" width="170" height="92" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <text x="12" y="18" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6">Permissions</text>
+
+      <!-- Toggle 1 - ON -->
+      <text x="12" y="38" font-family="system-ui, sans-serif" font-size="8" fill="#fff" opacity="0.5">Read access</text>
+      <g transform="translate(130, 31)">
+        <rect x="0" y="0" width="28" height="14" rx="7" fill="#3d7ada" fill-opacity="0.4" stroke="#3d7ada" stroke-width="1"/>
+        <circle cx="21" cy="7" r="5" fill="#6ca6f8"/>
+      </g>
+
+      <!-- Toggle 2 - ON -->
+      <text x="12" y="56" font-family="system-ui, sans-serif" font-size="8" fill="#fff" opacity="0.5">Write access</text>
+      <g transform="translate(130, 49)">
+        <rect x="0" y="0" width="28" height="14" rx="7" fill="#3d7ada" fill-opacity="0.4" stroke="#3d7ada" stroke-width="1"/>
+        <circle cx="21" cy="7" r="5" fill="#6ca6f8"/>
+      </g>
+
+      <!-- Toggle 3 - OFF -->
+      <text x="12" y="74" font-family="system-ui, sans-serif" font-size="8" fill="#fff" opacity="0.5">Admin access</text>
+      <g transform="translate(130, 67)">
+        <rect x="0" y="0" width="28" height="14" rx="7" fill="#2a4a8b" fill-opacity="0.4" stroke="#2a4a8b" stroke-width="1"/>
+        <circle cx="7" cy="7" r="5" fill="#3d7ada" opacity="0.4"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Connection lines from controls to shield -->
+  <line x1="385" y1="140" x2="345" y2="175" stroke="#3d7ada" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.25" stroke-linecap="round"/>
+  <line x1="385" y1="180" x2="345" y2="190" stroke="#3d7ada" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.25" stroke-linecap="round"/>
+  <line x1="385" y1="220" x2="345" y2="205" stroke="#3d7ada" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.25" stroke-linecap="round"/>
+
+  <!-- ============ BOTTOM: COMPLIANCE BADGES ============ -->
+  <g transform="translate(140, 370)">
+    <!-- Badge 1 -->
+    <g filter="url(#item-glow)">
+      <rect x="0" y="0" width="90" height="36" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <polyline points="12,16 16,21 24,12" stroke="#3d7ada" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="32" y="20" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6">SOC 2</text>
+    </g>
+
+    <!-- Badge 2 -->
+    <g transform="translate(105, 0)" filter="url(#item-glow)">
+      <rect x="0" y="0" width="90" height="36" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <polyline points="12,16 16,21 24,12" stroke="#3d7ada" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="32" y="20" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6">GDPR</text>
+    </g>
+
+    <!-- Badge 3 -->
+    <g transform="translate(210, 0)" filter="url(#item-glow)">
+      <rect x="0" y="0" width="110" height="36" rx="6" stroke="#2a4a8b" stroke-width="1" fill="#2a4a8b" fill-opacity="0.15"/>
+      <polyline points="12,16 16,21 24,12" stroke="#3d7ada" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="32" y="20" font-family="system-ui, sans-serif" font-size="9" fill="#fff" opacity="0.6">HIPAA Ready</text>
+    </g>
+  </g>
+
+  <!-- Decorative shield outline in background -->
+  <path d="M 300 50 L 370 78 L 370 150 Q 370 200 300 225 Q 230 200 230 150 L 230 78 Z" stroke="#2a4a8b" stroke-width="0.5" fill="none" opacity="0.1"/>
+</svg>
