@@ -1514,6 +1514,20 @@ h1 em {
     flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+    .frameworks-grid-stack {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .frameworks-grid-connectors {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
 .framework-item {
     display: flex;
     flex-direction: column;
