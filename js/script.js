@@ -14,56 +14,13 @@ function initRandomHeadline() {
     }
 }
 
-// Theme Toggle - Dark/Light Mode
-// Dark mode is the default for this minimal design
+// Always dark mode
 function initThemeToggle() {
-    const themeToggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-
-    // Check for saved theme preference - default to dark mode
-    function getPreferredTheme() {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            return savedTheme;
-        }
-        // Default to dark mode for minimal design
-        return 'dark';
-    }
-
-    // Apply theme
-    function setTheme(theme) {
-        if (theme === 'dark') {
-            html.setAttribute('data-theme', 'dark');
-        } else {
-            html.removeAttribute('data-theme');
-        }
-        localStorage.setItem('theme', theme);
-    }
-
-    // Initialize theme on page load
-    const initialTheme = getPreferredTheme();
-    setTheme(initialTheme);
-
-    // Toggle theme on button click
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            setTheme(newTheme);
-        });
-    }
+    document.documentElement.setAttribute('data-theme', 'dark');
 }
 
-// Initialize theme toggle early to prevent flash - default to dark
 (function() {
-    const savedTheme = localStorage.getItem('theme');
-    // Default to dark mode if no preference saved
-    if (savedTheme === 'light') {
-        // User explicitly chose light mode
-    } else {
-        // Default to dark mode
-        document.documentElement.setAttribute('data-theme', 'dark');
-    }
+    document.documentElement.setAttribute('data-theme', 'dark');
 })();
 
 // Mobile Menu Toggle
