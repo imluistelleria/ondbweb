@@ -5762,9 +5762,6 @@ body::before {
 
 .features-accordion-image {
     aspect-ratio: 4 / 3;
-    border-radius: var(--radius-16, 16px);
-    background: var(--bg-gray);
-    border: 1px solid var(--border-color);
     overflow: hidden;
     position: relative;
 }
@@ -5786,10 +5783,10 @@ body::before {
 }
 
 .features-placeholder img {
-    width: 100%;
-    height: 100%;
+    width: 115%;
+    height: 115%;
     object-fit: contain;
-    padding: 16px;
+    margin: -7.5%;
 }
 
 @media (max-width: 768px) {
