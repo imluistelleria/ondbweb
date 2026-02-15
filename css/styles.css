@@ -2063,7 +2063,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 48px;
+    gap: 24px;
     padding: 24px 56px;
     background: var(--section-alt-bg);
     border: 1px solid var(--border-color);
@@ -2079,8 +2079,6 @@ h2 {
     text-transform: uppercase;
     font-weight: 500;
     white-space: nowrap;
-    flex: 1;
-    text-align: right;
 }
 
 .partner-logos-divider {
