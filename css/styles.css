@@ -5810,6 +5810,11 @@ body::before {
 }
 
 @media (max-width: 768px) {
+    .features-accordion-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
     .features-accordion-list,
     .features-accordion-visual {
         display: none;
