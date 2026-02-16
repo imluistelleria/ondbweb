@@ -1253,11 +1253,29 @@ h1 em {
     position: relative;
 }
 
+.terminal-mascot {
+    position: absolute;
+    top: -95px;
+    right: 10px;
+    width: 160px;
+    height: 160px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .terminal-wrapper {
+        margin-top: 100px;
+    }
+}
+
 .glass-terminal {
     background: #0a0a0b;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-12);
     overflow: hidden;
+    position: relative;
+    z-index: 1;
     box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
     transition: border-color 0.2s ease;
 }
